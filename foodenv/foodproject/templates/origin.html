@@ -1,0 +1,11 @@
+
+    {% for post in context %}
+        <div>
+            <p>published: {{ post.text }}</p>
+
+        </div>
+        {% if post.image %}
+
+		<img src="/uploads/{{ post.image}}" />
+		{% endif %}
+    {% endfor %}

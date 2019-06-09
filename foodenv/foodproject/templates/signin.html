@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>register</title>
+<meta charset="utf-8">
+<link rel="stylesheet"  href="css/stylesForRegister.css">
+<script type="text/javascript" src="js/register.js"></script>
+
+<script type="text/javascript">
+
+	document.getElementById('name2').select();
+</script>
+
+</head>
+<body>
+		{% load socialaccount %}
+  
+
+		
+		<form name='login form' method = 'GET'>
+ 			 
+ 			 <label for = 'user_id'>Your ID:</label>
+ 			 <input id = 'user_id' type="email" name="user_id">
+
+ 			 <label for = 'user_pass'>Your Password:</label>
+ 			 <input id = 'user_pass' type="password" name="user_pass">
+ 			 <input type="submit" value="登入">
+ 			 <input type="reset" value="清除重填">
+ 			
+ 		</form>
+ 		 {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}!</p>
+ 			  <a href="{% url 'account_logout' %}">Logout</a>
+ 		{% else %}
+ 			<a href="{% url 'account_login' %}">Login Page</a>
+      <a href="{% provider_login_url 'github' %}">Github登入</a>
+ 		{% endif %}
+ 		<a href="/signup">signup</a>
+ 
+</body>
+</html>

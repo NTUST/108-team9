@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/stylesForSearchPage.css">
+	<script src="js/scriptForSearchPage.js"></script>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<div class = "condition">
+		<div class = "foodType">
+			料理類型：
+			<input type="checkbox" name="">日式料理
+			<input type="checkbox" name="">中式料理
+			<input type="checkbox" name="">小吃
+			<input type="checkbox" name="">炸物
+		</div>
+
+		<div class = "costRange">
+			餐點價位：
+			<input type="number" name="">
+			~
+			<input type="number" name="">
+		</div>
+
+		<div class = "cannotEat">
+			飲食禁忌：
+			<input type="checkbox" name="">不吃豬肉
+			<input type="checkbox" name="">不吃牛肉
+			<input type="checkbox" name="">純素食者
+			<input type="checkbox" name="">蛋奶素者
+		</div>
+
+		<input class = "searchInput" type="submit" name="" value = "搜尋">
+		<button class = "clearBtn" onclick="clearAllCondition()">清除所有條件</button>
+	</div>	
+</body>
+</html>

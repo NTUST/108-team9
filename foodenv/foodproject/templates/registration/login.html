@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>register</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet"  href="/uploads/css/stylesForSignin.css">
+</head>
+
+<body background="/uploads/background.jpg" style="background-size: cover;">
+  <article>
+    <div class="square">
+      <h1>帳號登入</h1>
+      <form method="post" name="myform" align="center" action="{% url 'login' %}" >
+        {% csrf_token %}
+        <table align="center">
+          <tr>
+            <td><p>帳號：</p></td>
+            <td>{{ form.username }}</td>
+          </tr>
+          <tr>
+            <td><p>密碼：</p></td>
+            <td>{{ form.password }}</td>
+          </tr>
+        </table>
+        <a href="/signup" class="button">註冊</a>&nbsp&nbsp
+        <input class="button" type="reset" value="清除">&nbsp&nbsp
+        <input class="button" type="submit" value="登入">
+      </form>
+
+
+      <br>
+      <br>
+      <br>
+
+    </div>
+  </article>  
+
+</body>
+</html>

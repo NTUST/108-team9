@@ -1,0 +1,121 @@
+
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <title>Monochromed by TEMPLATED</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script src="{% static 'jquery/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'popper/popper.js' %}"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/skel.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/util.js' %}"></script>
+    <script src="{% static 'bootstrap/js/main.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/main.css' %}">
+    <style>
+      article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #FCFAF2;
+            height: 2000px; /* only for demonstration, should be removed */
+            position: relative;
+      }
+      navright{
+          height: 2000px;
+          background-color:#FCFAF2;
+          float: right;
+          width:10%;
+      }
+      navleft{
+          height: 2000px;
+          background-color:#FCFAF2;
+          float: left;
+          width:10%;
+      }
+
+
+        }
+        div.gallery {
+          }
+
+        table, th, td {
+            border: 5px solid black;
+        }
+      
+    </style>
+
+
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+  </head>
+  <body>
+
+    <!-- Header -->
+      <header id="header">
+        <nav class="left">
+        <!--<a href="#menu"><span>Menu</span></a>-->
+        <p style="font-size: 40px">&nbsp&nbsp|&nbsp&nbsp<a href="" target="_self" style=" font-size:25px">Store list</a>&nbsp&nbsp | &nbsp&nbsp
+        <a href="" target="_self" style=" font-size:25px">Search</a>
+        &nbsp&nbsp | &nbsp&nbsp
+        <a href="" target="_self" style="font-size:25px">About us</a>
+        </li>&nbsp&nbsp|</p>
+        </nav>
+        <a href="index.html" class="logo">Enjoy eating, Better life</a>
+        <nav class="right">
+  
+            {% load socialaccount %}
+            {% if user.is_authenticated %}
+            <p>Hello, {{ user.username }}!</p>
+            <a href="{% url 'logout' %}" class="button alt">登出</a><br>
+            {% else %}
+            <a href="{% url 'login' %}" class="button alt" target="_self" style="text-decoration:none;color : #B5495B;font-weight: bold;"> 登入 </a>
+            {% endif %}
+         
+        </nav>
+      </header>
+
+    <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generic.html">choose you like</a></li>
+          <li><a href="elements.html">store list</a></li>
+        </ul>
+        <ul class="actions vertical">
+          <li><a href="#" class="button fit">Login</a></li>
+        </ul>
+      </nav>
+
+    <!-- Banner -->
+      <!--<section id="banner" style="background-image: url(../../uploads/235112.jpg" >
+        <div class="content">
+          <h1>公館好食</h1>
+          <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod<br />sed arcu cras consecuat lorem ipsum dolor sit amet.</p>
+          <ul class="actions">
+            <li></li>
+          </ul>
+          <br><br>
+        </div>
+      </section>-->   
+      <navleft></navleft>
+      <article>
+        <header class="align-center">
+                  <h2 align="center">Lorem ipsum dolor</h2>
+                  <p align="center">maecenas feugiat ex purus, quis volutpat lacus placerat</p>
+                </header>
+                <hr />
+                <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
+                <p>Vivamus fermentum nibh vel pharetra blandit. Cras a purus urna. Sed et libero  Vivamus rutrum semper mauris, vitae consequat eros tempor ac. Pellentesque et ornare sapien</p>
+      </article>
+      <navright></navright>
+
+  </body>
+</html>

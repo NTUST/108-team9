@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>register</title>
+<meta charset="utf-8">
+<link rel="stylesheet"  href="/uploads/css/stylesForSignup.css">
+
+</head>
+<style>
+	
+
+</style>
+<body background="/uploads/background.jpg" style="background-size: cover;">
+<article>
+	<div class="square">
+		<form name="myform" align="center" action="{% url 'login' %}">
+            <br><h1>註冊帳號</h1>
+			<label for = 'lastname'>姓
+			<input id = 'lastname'  type="text" name="lastname">
+			<label for = 'firstname'>名字
+			<input id = 'firstname' type="text" name="firstname">
+			<br>
+			<label for = 'mail'>電子郵件
+			<input id = 'mail' type="email" name="mail">
+			<br>
+			<label for = 'passward'>設定密碼
+			<input id = 'passward' type="password" name="passward">
+			<br>
+			<label for = 'repassward'>確認密碼
+			<input id = 'repassward' type="password" name="repassward">
+			<br><br>
+			<input class="button" type="reset" value="清除">&nbsp&nbsp
+			&nbsp  &nbsp
+			
+			<input type="submit" class="button" value="確認" onclick="test()" >
+		</form>
+	</div>
+</article>	
+
+<script>
+	function test(){
+		alert("Success")
+	}
+
+
+</script>
+
+</body>
+</html>
